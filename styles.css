@@ -108,21 +108,12 @@ nav {
   background-color: rgb(0, 0, 0, 0.5);
   border-radius: 20px;
   width: auto;
-  width: 300px;
+  padding: 10px;
 }
 
-.bottom ul {
-  display: flex;
-  gap: 50px;
-}
-
-.bottom ul li {
-  list-style-type: none;
-}
-
-.bottom ul li a {
+.bottom p {
   color: rgb(147, 147, 147);
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #profile {
@@ -154,7 +145,7 @@ nav {
   display: flex;
   width: 100%;
   min-height: 300px;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 2rem;
 }
 
@@ -169,7 +160,8 @@ nav {
   height: 100%;
   object-fit: cover;
   position: relative;
-  transition: 0.3s;
+  transition: 0.5s;
+  border-radius: 5px;
 }
 
 .image-box:nth-child(odd) {
@@ -198,16 +190,23 @@ nav {
 
 .footer {
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .contact {
-  width: 350px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .contact ul li {
   list-style-type: none;
+}
+
+.contact ul li a {
+  color: #ffffff;
 }
 
 #copyright {
@@ -225,31 +224,7 @@ nav {
   font-size: 13px;
 }
 
-@media only screen and (max-width: 768px) {
-  .menu {
-    flex-wrap: wrap;
-  }
-
-  .menu ul {
-    /* display: none; */
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .logo {
-    width: 22%;
-    height: 60px;
-  }
-
-  .logo img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .list {
-    padding: 10px;
-  }
-}
+/* About */
 
 #top {
   margin-top: 8rem;
@@ -261,7 +236,7 @@ nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-image: url(aset/gambar9.jpg);
+  background-image: url(aset/gambar11.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -281,7 +256,7 @@ nav {
 
 .cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
 }
@@ -290,7 +265,6 @@ nav {
   width: 100%;
   text-align: center;
 }
-
 
 .card {
   position: relative;
@@ -312,10 +286,11 @@ nav {
   height: 200px;
   overflow: hidden;
   border-radius: 10px;
+  transition: 1.5s;
 }
 
 .card:hover {
-  height: 400px;
+  height: 350px;
 }
 
 .img-box img {
@@ -324,62 +299,221 @@ nav {
   height: 100%;
   top: 0;
   left: 0;
+  transition: 2s;
 }
 
 .card:hover .img-box {
-  top: -100px;
-  scale: 0.75;
+  top: -60px;
+  scale: 0.8;
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 }
 
 .card .content {
   position: absolute;
-  top: 252px;
-  width: 100%;
-  height: 35px;
+  top: 240px;
+  width: 300px;
   padding: 0 30px;
   text-align: center;
   overflow: hidden;
   transition: 0.5s;
 }
 
-.card:hover .content{
-  top: 130px;
-  height: 250px;
+.card:hover .content {
+  top: 200px;
+  height: 200px;
 }
 
-.card .content h2{
- font-size: 1.5rem;
- color: black;
+.card .content h2 {
+  font-size: 20px;
+  color: black;
 }
 
 .card .content p {
-  margin-top: 10px;
   color: black;
+  font-size: 15px;
+  font-weight: 600;
 }
 
-#achivment {
-  margin-top: 8rem;
-}
-
-.achivment {
+.berita {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  color: black;
-}
-
-.achivment-title {
+  gap: 20px;
   width: 100%;
-  text-align: center;
-  text-decoration: underline;
-  color: #ffffff;
 }
 
-.achivment-box {
-  width: 500px;
+.judul-berita {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.berita-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 20px;
+}
+
+.berita-box img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.berita-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.berita-content a {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.berita-content:hover a{
+  text-decoration: underline;
+}
+
+.berita-content p{
+  color: #ffffff;
+  font-weight: 200;
+}
+
+.berita-btn {
+  width: 220px;
+  text-align: center;
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 20px;
+  transition: 0.5s;
+}
+
+.berita-btn:hover {
+  transform: scale(1.1);
+}
+
+
+.berita-btn a {
+  color: black;
+  font-size: 18px;
+}
+
+.kerjasama {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.kerjasama-judul {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.kerjasama-logo img {
+  width: 80px;
+}
+
+/* VISI MISI */
+
+.visi {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: url(aset/gambar13.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.visi:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0, 0));
+}
+
+.visi-misi {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 15px 20px rgba(112, 111, 111, 0.525);
+  gap: 20px;
+}
+
+.misi ul li {
+  color: #ffffff;
+  list-style-type: square;
+}
+
+/* KONTAK */
+
+.kontak {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: url(aset/gambar9.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.kontak:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0, 0));
+}
+
+.informasi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.informasi-kontak {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  gap: 20px;
+}
+
+.informasi-kontak h1 {
+  font-size: 25px;
+}
+
+.informasi-kontak ul li {
+  list-style-type: none;
+}
+
+.informasi-kontak ul li a{
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.informasi-kontak ul li i {
+  font-size: 30px;
+}
+
+.informasi-map {
+  width: 50%;
 }
