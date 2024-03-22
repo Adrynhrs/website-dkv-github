@@ -4,11 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -16,35 +16,16 @@ a {
   text-decoration: none;
 }
 
-header {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-image: url(aset/gambar4.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
-}
-
-header:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 60vh;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0, 0));
-}
-
 nav {
   display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  position: relative;
+  justify-content: space-around;
+  position: fixed;
+  padding: 10px;
+  background-color: #ffffff;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  border: 2px solid black;
 }
 
 .logo {
@@ -60,67 +41,171 @@ nav {
 }
 
 .logo a {
-  color: #ffffff;
   font-size: 45px;
   font-weight: 600;
+  color: black;
 }
 
 .menu {
-  position: relative;
-}
-
-.menu ul {
   display: flex;
   gap: 20px;
   padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu ul li {
-  list-style-type: none;
-}
-
-.menu ul li a {
-  color: #ffffff;
+.menu a {
+  position: relative;
+  display: inline-block;
+  color: black;
   font-weight: 500;
   font-size: 20px;
+  position: relative;
+  z-index: 2;
 }
 
-.list i {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 40px;
+.menu .animated {
+  position: absolute;
+  bottom: 20px;
+  height: 8px;
+  left: 695px;
+  width: 95px;
+  background: linear-gradient(45deg, #0F2C59, black);
+  border-radius: 5px;
+  transition: 0.8s;
+  z-index: 0;
+  overflow: hidden;
 }
 
-.title {
-  margin: auto;
-  margin-top: 140px;
-  font-size: 4rem;
-  color: #ffffff;
-  font-weight: 700;
-  padding: 20px;
+.menu a:nth-child(1):hover ~ .animated {
+  left: 100;
+}
+.menu a:nth-child(2):hover ~ .animated {
+  left: 800px;
+  width: 150px;
+}
+.menu a:nth-child(3):hover ~ .animated {
+  left: 956px;
+  width: 115px;
+}
+.menu a:nth-child(4):hover ~ .animated {
+  left: 1075px;
+  width: 85px;
 }
 
-.bottom {
+header {
+  width: 100%;
+  height: 90vh;
   display: flex;
   justify-content: center;
-  position: relative;
-  margin: auto;
-  bottom: -40px;
-  margin-top: auto;
-  background-color: rgb(0, 0, 0, 0.5);
-  border-radius: 20px;
-  width: auto;
-  padding: 10px;
+  align-items: center;
 }
 
-.bottom p {
-  color: rgb(147, 147, 147);
-  font-size: 20px;
+.slider {
+  width: 99%;
+  height: 90vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 100%;
+  height: 700px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* manual slide */
+
+.navigation-manual {
+  position: absolute;
+  width: 99%;
+  border-radius: 5px;
+  display: flex;
+  bottom: 100px;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: linear-gradient(45deg, #191349, #160662);
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+.navigation-auto {
+  position: auto;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: white;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: white;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background-color: white;
 }
 
 #profile {
-  margin-bottom: 8rem;
-  margin-top: 5rem;
+  color: black;
+  padding: 50px;
+  width: 100%;
 }
 
 .profile {
@@ -129,37 +214,62 @@ nav {
   align-items: center;
 }
 
-#about {
-  width: 100%;
-  padding: 2.5rem 0;
+.judul-dokumentasi {
+  text-align: center;
+  padding: 20px;
 }
 
-.deskripsi {
+
+.deskripsi h1 {
   padding: 10px;
+  color: #0F2C59;
 }
+
+.deskripsi p {
+  padding: 10px;
+  color: black;
+}
+
 
 .container {
   width: 1100px;
   margin: auto;
 }
 
+#About {
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 70px;
+  color: white;
+  background-color: #0F2C59;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
 .image {
   display: flex;
   width: 100%;
   min-height: 300px;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 2rem;
+  gap: 20px;
 }
 
 .image-box {
-  width: 22%;
-  height: 250px;
+  width: 250px;
+  height: 300px;
   position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .image-box img {
-  width: 100%;
-  height: 100%;
+  width: 210px;
+  height: 200px;
   object-fit: cover;
   position: relative;
   transition: 0.5s;
@@ -174,10 +284,15 @@ nav {
   opacity: 0.5;
 }
 
-.image-box h1 {
-  position: absolute;
-  bottom: -7%;
-  left: 50%;
+.image-box p {
+ text-align: center;
+ color: #191349;
+ 
+}
+
+#info {
+  color: white;
+  width: 100%;
 }
 
 .info {
@@ -187,7 +302,10 @@ nav {
 }
 
 #contact {
-  margin-top: 5rem;
+  padding: 50px;
+  background-color: #0F2C59;
+  width: 100%;
+  color: #ffffff;
 }
 
 .footer {
@@ -212,7 +330,10 @@ nav {
 }
 
 #copyright {
-  margin-top: 5rem;
+  background-color: #0F2C59;
+  width: 100%;
+  padding: 30px;
+  color: #ffffff;
 }
 
 .copyright {
@@ -226,34 +347,68 @@ nav {
   font-size: 13px;
 }
 
-/* About */
+/* PROFIL JURUSAN */
+
+#about {
+  padding: 30px;
+  padding-bottom: 80px;
+  background-color: #0F2C59;
+  color: #ffffff;
+}
+
+
+.menu-about {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-about a {
+  position: relative;
+  display: inline-block;
+  color: #191349;
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-about .animated {
+  position: absolute;
+  height: 8px;
+  bottom: 20px;
+  left: 800px;
+  width: 150px;
+  background: linear-gradient(45deg, #191349, black);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.menu-about a:nth-child(1):hover ~ .animated {
+  left: 695px;
+  width: 95px;
+}
+.menu-about a:nth-child(2):hover ~ .animated {
+  left: 823;
+}
+.menu-about a:nth-child(3):hover ~ .animated {
+  left: 956px;
+  width: 130px;
+}
+.menu-about a:nth-child(4):hover ~ .animated {
+  left: 1075px;
+  width: 85px;
+}
 
 #top {
-  margin-top: 8rem;
-}
-
-.tentang {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-image: url(aset/gambar11.jpg);
+  margin-bottom: 20px;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   background-position: center;
   object-fit: cover;
-}
-
-.tentang:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 60vh;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0, 0));
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .cards {
@@ -261,11 +416,13 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
+  padding: 20px;
 }
 
 .guru {
   width: 100%;
   text-align: center;
+  padding: 30px;
 }
 
 .card {
@@ -276,7 +433,7 @@ nav {
   align-items: flex-start;
   width: 250px;
   height: 300px;
-  background-color: #ffffff;
+  background-color: #0F2C59;
   border-radius: 20px;
   transition: 0.5s;
 }
@@ -327,27 +484,35 @@ nav {
 
 .card .content h2 {
   font-size: 20px;
-  color: black;
+  color: white;
 }
 
 .card .content p {
-  color: black;
+  color: white;
   font-size: 15px;
   font-weight: 600;
 }
 
+
+#berita {
+  padding-bottom: 30px;
+}
+
 .berita {
+  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   width: 100%;
+  color: #0F2C59;
 }
 
 .judul-berita {
   text-align: center;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  color: #0F2C59;
 }
 
 .berita-box {
@@ -356,7 +521,7 @@ nav {
   align-items: center;
   width: 80%;
   gap: 20px;
-}
+} 
 
 .berita-box img {
   width: 300px;
@@ -369,24 +534,24 @@ nav {
 }
 
 .berita-content a {
-  color: #ffffff;
+  color: #0F2C59;
   font-size: 20px;
   font-weight: 700;
 }
 
-.berita-content:hover a{
+.berita-content:hover a {
   text-decoration: underline;
 }
 
-.berita-content p{
-  color: #ffffff;
+.berita-content p {
+  color: black;
   font-weight: 200;
 }
 
 .berita-btn {
   width: 220px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #0F2C59;
   border-radius: 20px;
   transition: 0.5s;
 }
@@ -395,10 +560,13 @@ nav {
   transform: scale(1.1);
 }
 
-
 .berita-btn a {
-  color: black;
+  color: #ffffff;
   font-size: 18px;
+}
+
+#kerjasama {
+  padding: 30px;
 }
 
 .kerjasama {
@@ -418,35 +586,70 @@ nav {
 }
 
 /* VISI MISI */
-
-.visi {
-  width: 100%;
-  height: 100vh;
-  position: relative;
+.menu-visi {
   display: flex;
-  flex-direction: column;
-  background-image: url(aset/gambar13.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-.visi:before {
-  content: "";
+.menu-visi a {
+  position: relative;
+  display: inline-block;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-visi .animated {
   position: absolute;
-  width: 100%;
-  height: 60vh;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0, 0));
+  height: 8px;
+  bottom: 20px;
+  left: 956px;
+  width: 115px;
+  background: linear-gradient(45deg, #0F2C59, black);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.menu-visi a:nth-child(1):hover ~ .animated {
+  left: 695px;
+  width: 95px;
+}
+.menu-visi a:nth-child(2):hover ~ .animated {
+  left: 800px;
+  width: 150px;
+}
+.menu-visi a:nth-child(3):hover ~ .animated {
+  left: 981;
+}
+.menu-visi a:nth-child(4):hover ~ .animated {
+  left: 1075px;
+  width: 85px;
+}
+
+
+#visi {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.judul-visi {
+  color: #0F2C59;
+  text-align: center;
+}
+
+.misi {
+  color: #0F2C59;
 }
 
 .visi-misi {
   display: flex;
   flex-direction: column;
-  border: 2px solid #ffffff;
+  border: 2px solid black;
   border-radius: 10px;
   padding: 25px;
   box-shadow: 0 15px 20px rgba(112, 111, 111, 0.525);
@@ -454,34 +657,57 @@ nav {
 }
 
 .misi ul li {
-  color: #ffffff;
+  color: #0F2C59;
   list-style-type: square;
 }
 
 /* KONTAK */
 
-.kontak {
-  width: 100%;
-  height: 100vh;
-  position: relative;
+
+.menu-contact {
   display: flex;
-  flex-direction: column;
-  background-image: url(aset/gambar9.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-.kontak:before {
-  content: "";
+.menu-contact a {
+  position: relative;
+  display: inline-block;
+  color: #0F2C59;
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-contact .animated {
   position: absolute;
-  width: 100%;
-  height: 60vh;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0, 0));
+  bottom: 20px;
+  left: 1075px;
+  width: 85px;
+  height: 8px;
+  background: linear-gradient(45deg, #0F2C59, black);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.menu-contact a:nth-child(1):hover ~ .animated {
+  left: 695px;
+  width: 95px;
+}
+.menu-contact a:nth-child(2):hover ~ .animated {
+  left: 800px;
+  width: 150px;
+}
+.menu-contact a:nth-child(3):hover ~ .animated {
+  left: 956px;
+  width: 115px;
+}
+.menu-contact a:nth-child(4):hover ~ .animated {
+  left: 970;
+  width: 100px;
 }
 
 .informasi {
@@ -501,14 +727,15 @@ nav {
 
 .informasi-kontak h1 {
   font-size: 25px;
+  color: #0F2C59;
 }
 
 .informasi-kontak ul li {
   list-style-type: none;
 }
 
-.informasi-kontak ul li a{
-  color: #ffffff;
+.informasi-kontak ul li a {
+  color: #0F2C59;
   font-size: 25px;
 }
 
@@ -518,4 +745,8 @@ nav {
 
 .informasi-map {
   width: 50%;
+}
+
+.informasi-isi ul li {
+  color: #0F2C59;
 }
