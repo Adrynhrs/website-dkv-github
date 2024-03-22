@@ -8,29 +8,64 @@
     <title>Desain Komunikasi Visual</title>
   </head>
   <body>
+    <nav>
+      <div class="logo">
+        <img src="aset/logo2.jpg" alt="logo" />
+        <a href=""> DKV</a>
+      </div>
+      <div class="menu">
+        <a href="">Beranda</a>
+        <a href="about.html">Profil Jurusan</a>
+        <a href="visi.html">Visi & Misi</a>
+        <a href="contact.html">Kontak</a>
+        <div class="animated"></div>
+      </div>
+    </nav>
+
     <header>
-        <nav>
-          <div class="logo">
-            <img src="aset/logo2.jpg" alt="logo" />
-            <a href=""> DKV</a>
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+
+          <div class="slide first">
+            <img src="aset/gambar11.jpg" alt="" />
           </div>
-          <div class="menu">
-            <ul>
-              <li><a href="">Beranda</a></li>
-              <li><a href="about.html">Profil Jurusan</a></li>
-              <li><a href="visi.html">Visi & Misi</a></li>
-              <li><a href="contact.html">Kontak</a></li>
-            </ul>
+          <div class="slide">
+            <img src="aset/gambar13.jpg" alt="" />
           </div>
-        </nav>
-        <div class="title"></div>
+          <div class="slide">
+            <img src="aset/gambar14.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="aset/gambar6.jpg" alt="" />
+          </div>
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+        </div>
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+      </div>
     </header>
+
+    <!-- ISI MULAI-->
+
     <section id="profile">
       <div class="container">
         <div class="profile">
-          <div class="deskripsi" data-aos="fade-right">
+          <div class="deskripsi" data-aos="fade-right" data-aos-duration="1000">
             <h1>Profile Singkat</h1>
-
             <p>
               Jurusan Desain Komunikasi Visual (DKV) merupakan bidang studi yang
               berfokus pada pengembangan kreativitas dalam menyampaikan pesan
@@ -40,7 +75,7 @@
               efektif kepada khalayak menggunakan elemen-elemen visual.
             </p>
           </div>
-          <div class="youtube" data-aos="fade-left">
+          <div class="youtube" data-aos="fade-left" data-aos-duration="1000">
             <iframe
               width="560"
               height="315"
@@ -56,56 +91,55 @@
     </section>
     <section id="About">
       <div class="container">
-        <div class="image">
-          <div class="image-box" data-aos="fade-up-right">
-            <img src="aset/gambar5.jpg" alt="" />
-            <h1>D</h1>
-          </div>
-          <div class="image-box">
-            <img src="aset/gambar6.jpg" alt="" data-aos="fade-down-right" />
-            <h1>K</h1>
-          </div>
-          <div class="image-box">
-            <img src="aset/gambar7.jpg" alt="" data-aos="fade-up-left" />
-            <h1>V</h1>
-          </div>
-          <div class="image-box">
-            <img src="aset/gambar8.jpg" alt="" data-aos="fade-down-left" />
-            <h1>.</h1>
-          </div>
+        <div class="judul-dokumentasi">
+          <h1>Dokumentasi Kegiatan</h1>
         </div>
-        <div class="deskripsi">
-          <p>
-            Berikut ini adalah merupakan beberapa dokumentasi, dan aktivitas
-            yang dilakukan siswa-siswi DKV:
-          </p>
-          <ul>
-            <li>Kunjungan industri ke Jawa Pos</li>
-            <li>
-              Dokumentasi kegiatan yang dilakukan saat kunjungan industri di
-              Jawa Pos
-            </li>
-            <li>
-              Pengabdian masyarakat di desa Jambuwer sebagai tim dokumentasi
-            </li>
-          </ul>
+        <div class="image">
+          <div class="image-box" data-aos="fade-up-right" data-aos-duration="2000" data-aos-delay="500">
+            <img src="aset/gambar5.jpg" alt="" />
+            <p>
+              Kunjungan industri ke Jawa Pos.
+            </p>
+          </div>
+          <div class="image-box"  data-aos="fade-down-right" data-aos-duration="2000" data-aos-delay="500">
+            <img src="aset/gambar15.jpg" alt=""/>
+            <p>
+              Outing class materi fotografi bersama siswa-siswi DKV di Jogja.
+            </p>
+          </div>
+          <div class="image-box" data-aos="fade-up-left" data-aos-duration="2000" data-aos-delay="500"> 
+            <img src="aset/gambar7.jpg" alt=""  />
+            <p>
+              Pengabdian masyarakat di desa Jambuwer sebagai tim dokumentasi.
+            </p>
+          </div>
+          <div class="image-box"  data-aos="fade-down-left" data-aos-duration="2000" data-aos-delay="500">
+            <img src="aset/gambar14.jpg" alt=""/>
+            <p>
+              Pelatihan siswa-siswi DKV di UNESA Surabaya.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="">
+    <section id="info">
       <div class="container">
         <div class="info">
-          <div data-aos="fade-down">
+          <div data-aos="fade-down" data-aos-duration="1000">
             <img src="https://cendikabangsa.sch.id/public/img/cs.png" alt="" />
           </div>
-          <div class="deskripsi" data-aos="fade-down">
+          <div class="deskripsi" data-aos="fade-down" data-aos-duration="1000">
             <h1>Minat Join? Hubungi Kami</h1>
             <p>Tim kami siap membantu anda</p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ISI SELESAI -->
+
+    <!-- FOOTER MULAI -->
 
     <footer id="contact">
       <div class="container">
@@ -192,6 +226,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- FOOTER SELESAI -->
+
     <script>
       window.va =
         window.va ||
@@ -221,6 +258,18 @@
           ease: "none",
         });
       });
+    </script>
+
+    <script>
+      let counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 5000);
     </script>
   </body>
 </html>
