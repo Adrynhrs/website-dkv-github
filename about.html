@@ -13,9 +13,9 @@
         <img src="aset/logo2.jpg" alt="logo" />
         <a href=""> DKV</a>
       </div>
-      <div class="menu-about">
+      <div class="menu">
         <a href="index.html">Beranda</a>
-        <a href="">Profil Jurusan</a>
+        <a href="" class="index">Profil Jurusan</a>
         <a href="visi.html">Visi & Misi</a>
         <a href="contact.html">Kontak</a>
         <div class="animated"></div>
@@ -65,35 +65,45 @@
           <h1>Dokumentasi Kegiatan</h1>
         </div>
         <div class="image">
-          <div class="image-box" data-aos="fade-up-right" data-aos-duration="2000">
+          <div
+            class="image-box"
+            data-aos="fade-up-right"
+            data-aos-duration="2000"
+          >
             <img src="aset/gambar5.jpg" alt="" />
-            <p>
-              Kunjungan industri ke Jawa Pos.
-            </p>
+            <p>Kunjungan industri ke Jawa Pos.</p>
           </div>
-          <div class="image-box"  data-aos="fade-down-right" data-aos-duration="2000">
-            <img src="aset/gambar15.jpg" alt=""/>
+          <div
+            class="image-box"
+            data-aos="fade-down-right"
+            data-aos-duration="2000"
+          >
+            <img src="aset/gambar15.jpg" alt="" />
             <p>
               Outing class materi fotografi bersama siswa-siswi DKV di Jogja.
             </p>
           </div>
-          <div class="image-box" data-aos="fade-up-left" data-aos-duration="2000">
-            <img src="aset/gambar7.jpg" alt=""  />
+          <div
+            class="image-box"
+            data-aos="fade-up-left"
+            data-aos-duration="2000"
+          >
+            <img src="aset/gambar7.jpg" alt="" />
             <p>
               Pengabdian masyarakat di desa Jambuwer sebagai tim dokumentasi.
             </p>
           </div>
-          <div class="image-box"  data-aos="fade-down-left" data-aos-duration="2000">
-            <img src="aset/gambar14.jpg" alt=""/>
-            <p>
-              Pelatihan siswa-siswi DKV di UNESA Surabaya.
-            </p>
+          <div
+            class="image-box"
+            data-aos="fade-down-left"
+            data-aos-duration="2000"
+          >
+            <img src="aset/gambar14.jpg" alt="" />
+            <p>Pelatihan siswa-siswi DKV di UNESA Surabaya.</p>
           </div>
         </div>
       </div>
     </section>
-
-    
 
     <section id="berita">
       <div class="container">
@@ -166,7 +176,6 @@
         </div>
       </div>
     </section>
-
 
     <section id="top">
       <div class="container">
@@ -363,6 +372,17 @@
           ease: "none",
         });
       });
+    </script>
+    <script>
+      let counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 3000);
     </script>
   </body>
 </html>
