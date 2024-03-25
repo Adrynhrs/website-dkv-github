@@ -341,7 +341,8 @@ header {
 /* PROFIL JURUSAN */
 
 #about {
-  padding: 30px;
+  padding: 20px;
+  margin-top: 20px;
   padding-bottom: 80px;
   background-color: #0F2C59;
   color: #ffffff;
