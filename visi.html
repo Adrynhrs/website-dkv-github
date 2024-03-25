@@ -13,10 +13,10 @@
         <img src="aset/logo2.jpg" alt="logo" />
         <a href=""> DKV</a>
       </div>
-      <div class="menu-visi">
+      <div class="menu">
         <a href="index.html">Beranda</a>
         <a href="about.html">Profil Jurusan</a>
-        <a href="">Visi & Misi</a>
+        <a href="" class="index">Visi & Misi</a>
         <a href="contact.html">Kontak</a>
         <div class="animated"></div>
       </div>
@@ -62,9 +62,7 @@
     <section id="visi">
       <div class="container">
         <div class="judul-visi">
-          <h1>
-            Visi & Misi Sekolah
-          </h1>
+          <h1>Visi & Misi Sekolah</h1>
         </div>
         <div class="visi-misi">
           <div class="misi">
@@ -233,6 +231,17 @@
           ease: "none",
         });
       });
+    </script>
+    <script>
+      let counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 3000);
     </script>
   </body>
 </html>
