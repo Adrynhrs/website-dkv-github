@@ -22,7 +22,7 @@ nav {
   position: fixed;
   padding: 10px;
   padding-left: 30px;
-  padding-right: 170px;
+  padding-right: 50px;
   background-color: #ffffff;
   top: 0;
   width: 100%;
@@ -51,7 +51,7 @@ nav {
 .menu {
   display: flex;
   gap: 20px;
-  padding: 20px;
+  padding: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -64,36 +64,25 @@ nav {
   font-size: 20px;
   position: relative;
   z-index: 2;
+  transition: 1s;
 }
 
-.menu .animated {
-  position: absolute;
-  bottom: 20px;
-  height: 8px;
-  left: 695px;
-  width: 95px;
-  background: linear-gradient(45deg, #0F2C59, black);
-  border-radius: 5px;
-  transition: 0.8s;
-  z-index: 0;
-  overflow: hidden;
+.menu .index {
+  color: #ffffff;
+  background-color: #0F2C59;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 15px 20px rgba(28, 27, 27, 0.808);
 }
 
-.menu a:nth-child(1):hover ~ .animated {
-  left: 100;
+.menu a:hover {
+  color: #ffffff;
+  box-shadow: 0 15px 20px rgba(28, 27, 27, 0.808);
+  border-radius: 15px;
+  background-color: #0F2C59;
+  padding: 10px;
 }
-.menu a:nth-child(2):hover ~ .animated {
-  left: 800px;
-  width: 150px;
-}
-.menu a:nth-child(3):hover ~ .animated {
-  left: 956px;
-  width: 115px;
-}
-.menu a:nth-child(4):hover ~ .animated {
-  left: 1075px;
-  width: 85px;
-}
+
 
 header {
   width: 100%;
@@ -234,8 +223,8 @@ header {
 
 
 .container {
-  width: 1100px;
-  margin: auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 #About {
@@ -358,51 +347,6 @@ header {
   color: #ffffff;
 }
 
-
-.menu-about {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-about a {
-  position: relative;
-  display: inline-block;
-  color: #191349;
-  font-weight: 500;
-  font-size: 20px;
-  position: relative;
-  z-index: 2;
-}
-
-.menu-about .animated {
-  position: absolute;
-  height: 8px;
-  bottom: 20px;
-  left: 800px;
-  width: 150px;
-  background: linear-gradient(45deg, #191349, black);
-  border-radius: 8px;
-  transition: 0.5s;
-}
-
-.menu-about a:nth-child(1):hover ~ .animated {
-  left: 695px;
-  width: 95px;
-}
-.menu-about a:nth-child(2):hover ~ .animated {
-  left: 823;
-}
-.menu-about a:nth-child(3):hover ~ .animated {
-  left: 956px;
-  width: 130px;
-}
-.menu-about a:nth-child(4):hover ~ .animated {
-  left: 1075px;
-  width: 85px;
-}
 
 #top {
   margin-bottom: 20px;
@@ -588,50 +532,6 @@ header {
 }
 
 /* VISI MISI */
-.menu-visi {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-visi a {
-  position: relative;
-  display: inline-block;
-  color: black;
-  font-weight: 500;
-  font-size: 20px;
-  position: relative;
-  z-index: 2;
-}
-
-.menu-visi .animated {
-  position: absolute;
-  height: 8px;
-  bottom: 20px;
-  left: 956px;
-  width: 115px;
-  background: linear-gradient(45deg, #0F2C59, black);
-  border-radius: 8px;
-  transition: 0.5s;
-}
-
-.menu-visi a:nth-child(1):hover ~ .animated {
-  left: 695px;
-  width: 95px;
-}
-.menu-visi a:nth-child(2):hover ~ .animated {
-  left: 800px;
-  width: 150px;
-}
-.menu-visi a:nth-child(3):hover ~ .animated {
-  left: 981;
-}
-.menu-visi a:nth-child(4):hover ~ .animated {
-  left: 1075px;
-  width: 85px;
-}
 
 
 #visi {
@@ -664,53 +564,6 @@ header {
 }
 
 /* KONTAK */
-
-
-.menu-contact {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-contact a {
-  position: relative;
-  display: inline-block;
-  color: #0F2C59;
-  font-weight: 500;
-  font-size: 20px;
-  position: relative;
-  z-index: 2;
-}
-
-.menu-contact .animated {
-  position: absolute;
-  bottom: 20px;
-  left: 1075px;
-  width: 85px;
-  height: 8px;
-  background: linear-gradient(45deg, #0F2C59, black);
-  border-radius: 8px;
-  transition: 0.5s;
-}
-
-.menu-contact a:nth-child(1):hover ~ .animated {
-  left: 695px;
-  width: 95px;
-}
-.menu-contact a:nth-child(2):hover ~ .animated {
-  left: 800px;
-  width: 150px;
-}
-.menu-contact a:nth-child(3):hover ~ .animated {
-  left: 956px;
-  width: 115px;
-}
-.menu-contact a:nth-child(4):hover ~ .animated {
-  left: 970;
-  width: 100px;
-}
 
 .informasi {
   display: flex;
