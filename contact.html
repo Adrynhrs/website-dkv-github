@@ -13,11 +13,11 @@
         <img src="aset/logo2.jpg" alt="logo" />
         <a href=""> DKV</a>
       </div>
-      <div class="menu-contact">
+      <div class="menu">
         <a href="index.html">Beranda</a>
         <a href="about.html">Profil Jurusan</a>
         <a href="visi.html">Visi & Misi</a>
-        <a href="">Kontak</a>
+        <a href="" class="index">Kontak</a>
         <div class="animated"></div>
       </div>
     </nav>
@@ -263,6 +263,18 @@
           ease: "none",
         });
       });
+    </script>
+
+    <script>
+      let counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 3000);
     </script>
   </body>
 </html>
