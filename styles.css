@@ -94,14 +94,14 @@ header {
 
 .slider {
   width: 99%;
-  height: 90vh;
+  height: 600px;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .slides {
   width: 500%;
-  height: 500px;
+  height: 600px;
   display: flex;
 }
 
@@ -128,7 +128,7 @@ header {
   width: 99%;
   border-radius: 5px;
   display: flex;
-  bottom: 120px;
+  top: 650px;
   justify-content: center;
 }
 
