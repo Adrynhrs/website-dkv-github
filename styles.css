@@ -77,7 +77,7 @@ nav {
 
 .menu a:hover {
   color: #ffffff;
-  box-shadow: 0 15px 20px rgba(28, 27, 27, 0.808);
+  box-shadow: 0 5px 10px rgba(28, 27, 27, 0.808);
   border-radius: 15px;
   background-color: #0F2C59;
   padding: 10px;
